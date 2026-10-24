@@ -1,15 +1,13 @@
 import re
 import pandas as pd
 import streamlit as st
-import nltk
-from nltk.corpus import stopwords
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from sklearn.metrics.pairwise import cosine_similarity
 
 st.set_page_config(page_title="Company Recommender", page_icon="🏢")
 
-nltk.download("stopwords", quiet=True)
-stop_words = set(stopwords.words("english"))
+# using sklearn stopwords here, nltk download was not working on render
+stop_words = ENGLISH_STOP_WORDS
 
 
 def clean_text(text):
