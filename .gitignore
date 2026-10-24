@@ -1,0 +1,30 @@
+# Environments & Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build Artifacts
+build/
+dist/
+*.egg-info/
+
+# Local-only files (not part of the submission)
+pyrightconfig.json
+PROJECT_CONTEXT_NOTEBOOK.md
+tests/test_assignment_authenticity.py

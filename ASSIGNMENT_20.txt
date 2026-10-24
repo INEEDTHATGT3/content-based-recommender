@@ -1,0 +1,104 @@
+Assignment 20: Building & Deploying a Recommendation System
+
+Problem Statement
+You are working as an Al / ML Engineer. Your task is to build a content-based
+recommendation system, starting from raw data preprocessing, performing text
+vectorization, generating recommendations, and finally deploying the application on
+Render by connecting it to GitHub using Git.
+This assignment simulates a real-world end-to-end ML + deployment workflow.
+
+Dataset Requirement
+Choose one dataset from Kaggle (CSV format):
+Movie recommendation dataset
+Book recommendation dataset
+Product recommendation dataset
+
+Dataset must contain:
+An item identifier (movie name / product name / book title)
+A text-based feature (overview / description / tags / genre)
+Clearly mention the dataset name and Kaggle link.
+
+Restrictions:
+-Use Python, Pandas, scikit-learn, Streamlit/Flask only.
+No collaborative filtering required (content-based only).
+- Keep UI simple.
+
+PART 1 - Data Preprocessing
+
+Task 1: Load & Understand Dataset
+1. Load the dataset using Pandas.
+2. Print:
+o Dataset shape
+Column names
+First 5 rows
+o Other essential Details
+3. Identify text column(s) used for recommendations.
+
+Task 2: Text Preprocessing for Recommendation
+Apply the following steps on the text column:
+1. Convert text to lowercase
+2. Remove punctuation and special characters
+3. Remove stopwords
+4. Handle missing values (replace with empty string)
+Store cleaned text in a new column: clean_text.
+
+PART 2 - Text Vectorization
+
+Task 3: Vectorization using TF-IDF
+1. Use TfidfVectorizer() to convert text into vectors.
+2. Set reasonable parameters:
+o max_features
+o ngram_range
+3. Display:
+o Shape of TF-IDF matrix
+
+Task 4: Similarity Computation
+1. Compute cosine similarity between all items.
+2. Store similarity matrix.
+3. Explain briefly why cosine similarity is used.
+
+PART 3- Recommendation Logic
+
+Task 5: Build Recommendation Function
+Create a function:
+def recommend(item_name, top_n=5):
+# returns top N similar items
+Function should:
+1. Find index of the selected item2. Compute similarity scores
+3. Sort and return top recommendations
+Test with at least 3 different items.
+
+PART 4 - Simple App Interface
+
+Task 6: Build Ul using Streamlit
+1. Create a simple interface:
+o Dropdown to select item
+o Button to generate recommendations
+2. Display recommended items clearly.
+You may use:
+Streamlit (preferred)
+
+PART 5- Version Control with Git & GitHub
+Task 7: Git & GitHub Setup
+1. Initialize a Git repository.
+2. Create a GitHub repository.
+3. Push your project code to GitHub.
+Repository must include:
+app.py
+requirements.txt
+README.md
+
+PART 6 - Deployment on Render
+
+Task 8: Deploy Application on Render
+1. Create a Render account.
+2. Connect Render with GitHub.
+3. Select your repository.4. Configure:
+o Build command
+o Start command
+5. Deploy the application.
+
+Task 9: Final Validation
+1. Test deployed app link.
+2. Ensure recommendations work correctly.
+3. Include deployed URL in submission.
